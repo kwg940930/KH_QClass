@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>form</title>
+</head>
+<body>
+	<!-- 
+		method="get" -> 데이터가 보여지면서 전달
+		method="poat" -> 데이터가 숨겨져서 전달
+	-->
+	<form action="html08-form01-res.html" method="post">
+		<fieldset>
+			<legend>회원가입</legend>
+			
+			<p>아이디 : <input type="text" name="id"></p>
+			<p>비밀번호 : <input type="password" name="pw"></p>
+			<p>이메일 수신여부<br>
+				<input type="radio" name="radio" value="y">Yes<br>
+				<input type="radio" name="radio" value="n">No<br>
+				<!-- radio button은 1갬나 선택 가능! -->
+			</p>
+			<p>관심분야 : <br>
+				<input type="checkbox" name="cb1" valye="html">HTML<br>
+				<input type="checkbox" name="cb2" valye="css">css<br>
+				<input type="checkbox" name="cb3" valye="js">JavaScript<br>
+				<input type="checkbox" name="cb4" valye="jq">JQuery<br>
+			</p>
+			<p>
+				<input type="reset" value="취소">
+				<input type="button" value="그냥 버튼">
+				<input type="submit" value="전송">
+			</p>
+			<p>
+				<input type="file">
+				<input type="hidden" name="hd" value="my hidden value">
+			</p>
+			
+		</fieldset>
+	</form>
+	
+		<h1>select 요소</h1>
+	
+	<form action="#" method="get">
+		<fieldset>
+			<legend>여러줄 글 상자와 목록상자</legend>
+			
+			<p>
+				<label for ="reply">답글</label><br>
+				<textarea rows="3" cols="30" id="reply" name="re"></textarea>
+			</p>
+		
+			<p>
+				과목선택
+				<select name="select01">
+					<option value="html">HTML</option>
+					<option value="css">CSS</option>
+					<option value="js">JavaScript</option>
+					<option value="jq">JQuery</option>
+				</select>
+			</p>
+			
+			<p>
+				점심메뉴
+				<select name="select02">
+					<optgroup label="한식">
+						<option value="kimchi-zzigae">김치찌개</option>
+						<option value="bulgogi">불고기</option>
+						<option value="duenjang-zzigae">된장찌개</option>
+						<option value="samketang">감계탕</option>
+					</optgroup>
+					<optgroup label="분식">
+						<option value="jjolmean">쫄면</option>
+						<option value="dducnokki">떡볶이</option>
+						<option value="sundae">순대</option>
+					</optgroup>
+				</select>
+			</p>
+			
+			<input type="submit" value="전송">
+		
+		</fieldset>
+	</form>
+
+</body>
+</html>

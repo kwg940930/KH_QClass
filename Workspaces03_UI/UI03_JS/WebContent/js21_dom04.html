@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+	img{
+		vertical-align: middle;
+		width: 300px;
+		height: 300px;
+	}
+
+	a{
+		font-size: 30px;
+		text-decoration: none;
+	}
+</style>
+<script type="text/javascript">
+
+	window.onload=function(){
+		var anchs = document.querySelectorAll("a");
+		var img = document.querySelector("img");
+		var cnt = 1;
+		
+		
+		/*
+		anchs[0].onclick=function(){
+			var imgAlt = img.getAttribute("alt");
+			if (imgAlt == "img01") {
+				cnt = 3;
+				img.setAttribute("alt", "img0"+cnt);
+				img.setAttribute("src", "resources/image/img0"+cnt+".png");
+			}else{
+				--cnt;
+				img.setAttribute("alt", "img0"+cnt);
+				img.setAttribute("src", "resources/image/img0"+cnt+".png");
+			}
+		}
+		
+		anchs[1].onclick=function(){
+			var imgAlt = img.getAttribute("alt");
+			if (imgAlt == "img03") {
+				cnt = 1;
+				img.setAttribute("alt", "img0"+cnt);
+				img.setAttribute("src", "resources/image/img0"+cnt+".png");
+			}else{
+				cnt++;
+				img.setAttribute("alt", "img0"+cnt);
+				img.setAttribute("src", "resources/image/img0"+cnt+".png");
+			}
+		}
+		*/
+		
+		
+		
+		anchs[0].onclick=function(){
+			var imgAlt = img.getAttribute("alt");
+				if(imgAlt == "img01"){
+					cnt = 3;
+				} else if(imgAlt == "img02"){
+					cnt = 1;
+				} else if(imgAlt == "img03"){
+					cnt = 2;
+				}
+				img.setAttribute("alt", "img0"+cnt);
+				img.setAttribute("src", "resources/image/img0"+cnt+".png");
+			}
+		
+		anchs[1].onclick=function(){
+			var imgAlt = img.getAttribute("alt");
+				switch(imgAlt){
+				case "img01":
+					cnt = 2;
+					break;
+				case "img02":
+					cnt = 3;
+					break;
+				case "img03":
+					cnt = 1;
+					break;
+				}
+				img.setAttribute("alt", "img0"+cnt);
+				img.setAttribute("src", "resources/image/img0"+cnt+".png");
+			}
+		
+		
+		
+		
+		
+		
+		
+		/*
+		anchs[0].onclick=function(){
+			var imgAlt = img.getAttribute("alt");
+			if (imgAlt == "img01") {
+				cnt = 3;
+				img.setAttribute("alt", "img0"+cnt);
+				img.setAttribute("src", "resources/image/img0"+cnt+".png");
+			}
+			if (imgAlt == "img02") {
+				cnt = 1;
+				img.setAttribute("alt", "img0"+cnt);
+				img.setAttribute("src", "resources/image/img0"+cnt+".png");
+			}
+			if (imgAlt == "img03") {
+				cnt = 2;
+				img.setAttribute("alt", "img0"+cnt);
+				img.setAttribute("src", "resources/image/img0"+cnt+".png");
+			}
+		}
+		
+		anchs[1].onclick=function(){
+			var imgAlt = img.getAttribute("alt");
+			if (imgAlt == "img01") {
+				cnt = 2;
+				img.setAttribute("alt", "img0"+cnt);
+				img.setAttribute("src", "resources/image/img0"+cnt+".png");
+			}
+			if (imgAlt == "img02") {
+				cnt = 3;
+				img.setAttribute("alt", "img0"+cnt);
+				img.setAttribute("src", "resources/image/img0"+cnt+".png");
+			}
+			if (imgAlt == "img03") {
+				cnt = 1;
+				img.setAttribute("alt", "img0"+cnt);
+				img.setAttribute("src", "resources/image/img0"+cnt+".png");
+			}
+		}
+		*/
+	}
+
+</script>
+
+</head>
+<body>
+
+	<div>
+		<a href="#" id="lt">◀</a>
+		<img alt="img01" src="resources/image/img01.png">
+		<a href="#" id="gt">▶</a>
+	</div>
+
+</body>
+</html>

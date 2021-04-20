@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	function searchPar(){
+		var child02 = document.getElementsByTagName("p")[1];
+		var parent = child02.parentNode;
+		console.log(parent);
+		alert(parent.nodeName);
+		parent.style.backgroundColor='pink';
+	}
+
+	function searchChi(){
+		var div = document.getElementsByTagName("div")[0];
+		alert(div.length);
+		
+		// childNodes : 자식 노드들을 배열로 반환
+		var divChildren = div.childNodes;
+		console.log(divChildren);
+		divChildren[5].style.color="blue";
+		divChildren[5].style.backgroundColor="black";
+	}
+	
+	function test01(){
+		var ch = document.getElementsByTagName("p")[3];
+		var pa = ch.parentNode;
+		pa.style.backgroundColor="#F3E2A9";
+	}
+	
+	function test02(){
+		var div = document.getElementsByTagName("div")[2];
+		var children = div.childNodes[3];
+		children.style.fontSize="20pt";
+	}
+
+</script>
+</head>
+<body>
+
+	<h1>부모탐색, 자식탐색</h1>
+
+	<div>
+		<p>child01</p>
+		<p>child02</p>
+		<p>child03</p>
+	</div>
+	
+	<button onclick="searchPar();">부모탐색</button>
+	<button onclick="searchChi();">자식탐색</button>
+	
+	<!-- 문제 -->
+	<h3 onclick="test01();">1. "test01을 포함하는 부모태그"의 배경색을 지정하자</h3>
+	<!-- parentNode 사용하기! -->
+	
+	<h3 onclick="test02();">2. "세번째 div 태그에 포함된 test04"의 폰트 크기를 20pt로 적용하자</h3>
+	
+	<div>
+		<p>test01</p>
+		<p>test02</p>
+	</div>
+	<div>
+		<p>test03</p>
+		<p>test04</p>
+	</div>
+</body>
+</html>

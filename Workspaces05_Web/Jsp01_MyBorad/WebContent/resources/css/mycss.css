@@ -1,0 +1,30 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+
+h1{
+	text-align: center;
+}
+
+table{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.list_seq{
+	text-align: center;
+}
+
+.list_writer{
+	text-align: center;
+}
+.list_date{
+	text-align: center;
+}
+
+.list_update_date{
+	font-size: 10px;
+	text-align:left;
+	color: gray;
+}

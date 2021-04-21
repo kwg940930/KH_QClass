@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="resources/js/jquery-3.5.1.min.js"></script>
+
+<script type="text/javascript">
+
+$(function(){
+	$("div > p").eq(0).click(function(){
+		$("pre b").eq(0).toggle();
+	});
+	$("div > p").eq(1).click(function(){
+		$("pre b").slice(1, 2).toggle();
+	});
+	$("div > p").eq(2).click(function(){
+		//$("pre b").first().css("color", "red");
+		//$("pre b").eq(2).toggle();
+		$("pre b").first().css("color","blue").text("연결되네?").end().eq(2).toggle();
+	});
+	$("div > p").eq(3).click(function(){
+		$("pre b").last().css("color", "green").text("얘도되네?").end().eq(1).toggle();
+	});
+});
+
+</script>
+
+
+
+
+</head>
+<body>
+
+	<pre>
+		<b>eq() : 선택한 앨리먼트 들 중에, 인덱스로 탑색</b>
+		<b>slice() : 선택한 앨리먼트 들 중에, 인덱스 길이로 탐색</b>
+		<b>first() : 선택한 앨리먼트 들 중에, 첫번째 요소</b>
+		<b>last() : 선택한 앨리먼트 들 중에, 마지막 요소</b>
+	</pre>
+	
+	<div>
+		<p>eq()</p>
+		<p>slice()</p>
+		<p>first()</p>
+		<p>last()</p>
+	</div>
+
+</body>
+</html>

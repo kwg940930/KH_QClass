@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="man" class="com.test02.Man" />
+	<bean id="woman" class="com.test02.Woman" />
+	
+	<!-- ccc : 공통 관심사항 -->
+	<bean id="myAdvice" class="com.test02.MyAspect" />
+	
+	<!-- proxy -->
+	<bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator" />
+	
+	<!-- advisor = advice + pointcut -->
+	<bean id="myAdvisor" class="org.springframework.aop.aspectj.AspectJExpressionPointcutAdvisor">
+		<property name="advice" ref="myAdvice" />
+		<property name="expression" value="execution(public * *(..))" />
+	</bean>
+</beans>
+
+<!-- 
+proxy:타겟인척 하는 애, 신호를 대신받아줌, 프록시가 인터셉트 해서 강탈해와서 응답해준다.
+pointcut : 프록시객체가 어떤 조인포인트에서 신호를 강탈할 것인지 알려주는애
+advice: target 전, 후에 공통 관심사 ccc 붙여주는 애
+advisor(aspect):pointcut+advice
+weaving:프로그램이 묶여서 잘 실행되게 하는 것 
+-->

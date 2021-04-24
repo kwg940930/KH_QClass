@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper">
+	<select id="listPaging" parameterType="map" resultType="Dto">
+	<![CDATA[
+		SELECT B.SEQ, B.WRITER, B.TITLE, B.CONTENT, B.REGDATE FROM
+		(SELECT ROWNUM AS RNUM, A.SEQ, A.WRITER, A.TITLE, A.CONTENT, A.REGDATE FROM
+		(SELECT SEQ, WRITER, TITLE, CONTENT, REGDATE FROM MODULBOARD
+		ORDER BY SEQ DESC) A
+		WHERE ROWNUM <= #{endRow} ) B
+		WHERE B.RNUM > #{startRow}
+	]]>
+	</select>
+	
+	<select id="getTotalCount" resultType="int">
+		SELECT COUNT(*) FROM MODULBOARD
+	</select>
+	
+</mapper>

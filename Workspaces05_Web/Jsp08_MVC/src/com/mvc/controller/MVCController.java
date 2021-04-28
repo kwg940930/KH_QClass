@@ -103,23 +103,19 @@ public class MVCController extends HttpServlet {
 			
 			if(res > 0){
 				
-				//response.sendRedirect("mvc.do?command=selectOne&seq="+seq);
-				
 				String html = "<script type='text/javascript'>"
 							+ "alert('" + "글 수정 성공" + "');"
-							+ "location.href='mvc.do?command=selectOne&seq=" + dto.getSeq() + "';"
+							+ "location.href='mvc.do?command=select&seq=" + seq + "';"
 							+ "</script>";
 				PrintWriter out = response.getWriter();
 				out.println(html);
 				
 			} else {
 				
-				//response.sendRedirect("mvc.do?command=selectOne&seq="+seq);
-				
 				PrintWriter out = response.getWriter();
 				String html = "<script type='text/javascript'>"
 							+ "alert('" + "글 수정 실패" + "');"
-							+ "location.href='mvc.do?command=update&seq=" + dto.getSeq() + "';"
+							+ "location.href='mvc.do?command=update&seq=" + seq + "';"
 							+ "</script>";
 				out.println(html);
 			} 
@@ -131,8 +127,6 @@ public class MVCController extends HttpServlet {
 			
 			if(res > 0){
 				
-				//dispatch(request, response, "mvc.do?command=list");
-				
 				String html = "<script type='text/javascript'>"
 							+ "alert('글 삭제 성공');"
 							+ "location.href='mvc.do?command=list'"
@@ -142,8 +136,6 @@ public class MVCController extends HttpServlet {
 				
 			} else {
 				
-				//dispatch(request, response, "mvc.do?command=selectOne&seq="+seq);
-				
 				PrintWriter out = response.getWriter();
 				String html = "<script type='text/javascript'>"
 							+ "alert('" + "글 삭제 실패" + "');"
@@ -151,9 +143,6 @@ public class MVCController extends HttpServlet {
 							+ "</script>";
 				out.println(html);
 			} 
-			
-			
-			
 			
 		}  else if(command.equals("multidelete")) {
 			

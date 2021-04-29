@@ -20,9 +20,5 @@ public class Developer extends Emp {
 	public String toString() {
 		return super.toString() + " 부서 : " + dept;
 	}
-	
-	
-	
-	
 
 }

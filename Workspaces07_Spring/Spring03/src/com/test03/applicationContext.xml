@@ -11,7 +11,7 @@
 	</bean>
 	
 	<!-- 이순신, 3000000, 개발 -->
-	<bean id="lee" class="com.test03.Engineer">
+	<bean id="lee" class="com.test03.Developer">
 		<constructor-arg name="name" value="이순신" />
 		<constructor-arg name="salary" value="3000000" />
 		<property name="dept" value="개발" />

@@ -5,6 +5,5 @@
 
 	<bean id="singleton" class="com.test01.AbstractTest" factory-method="getInstance"></bean>
 	<!-- AbstractTest singleton = AbstractTest.getInstance(); -->
-	
 
 </beans>

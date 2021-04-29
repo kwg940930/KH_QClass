@@ -11,7 +11,7 @@
 		<table>
 			<tr>
 				<th>ID</th>
-				<td><input type="text" name="memberid" /></td>
+				<td><input type="text" name="memberid" required="required" title="n" /></td>
 			</tr>
 			<tr>
 				<th>PW</th>
@@ -26,9 +26,6 @@
 					<input type="submit" value="가입" />
 					<input type="button" value="취소" onclick="location.href='loginform.do'" />
 				</td>
-			</tr>
-			<tr>
-				<td colspan="2" align="center" id="registChk"></td>
 			</tr>
 		</table>
 	</form>

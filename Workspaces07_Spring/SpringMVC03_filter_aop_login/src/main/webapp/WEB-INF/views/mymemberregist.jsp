@@ -18,7 +18,7 @@
 				<td><input type="text" name="memberpw" /></td>
 			</tr>
 			<tr>
-				<th>name</th>
+				<th>NAME</th>
 				<td><input type="text" name="membername" /></td>
 			</tr>
 			<tr>

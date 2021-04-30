@@ -6,6 +6,5 @@ public interface TV {
 	void powerOff();
 	void volumeUp();
 	void volumeDown();
-	
 
 }

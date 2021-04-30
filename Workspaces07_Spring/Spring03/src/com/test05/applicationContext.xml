@@ -13,5 +13,4 @@
 	<bean id="hong" class="com.test05.Emp" p:name="홍길동" p:salary="2500000" />
 	<bean id="hong-gd" class="com.test05.Engineer" p:emp-ref="hong" p:dept="기술팀" />
 	
-	
 </beans>

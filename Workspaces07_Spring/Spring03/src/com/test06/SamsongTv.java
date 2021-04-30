@@ -22,5 +22,4 @@ public class SamsongTv implements TV{
 		System.out.println("samsong tv volume down");
 	}
 
-
 }

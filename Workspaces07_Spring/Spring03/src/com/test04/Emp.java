@@ -21,6 +21,4 @@ public class Emp {
 		return "이름 : " + name + "\t 월급 : " + salary;
 	}
 	
-	
-
 }

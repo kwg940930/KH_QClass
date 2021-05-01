@@ -15,7 +15,7 @@
 			</tr>
 			<tr>
 				<th>PW</th>
-				<td><input type="text" name="memberpw" /></td>
+				<td><input type="password" name="memberpw" /></td>
 			</tr>
 			<tr>
 				<th>NAME</th>

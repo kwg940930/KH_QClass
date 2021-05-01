@@ -74,10 +74,10 @@ public class MYMemberController {
 	
 	@RequestMapping(value="registres.do", method=RequestMethod.POST)
 	public String registRes(MYMemberDto dto) {
-		logger.info("[Controller] registRes.do");
+		logger.info("[Controller] : registres.do");
 		
 		System.out.println("암호화 전 : " + dto.getMemberpw());
-		System.out.println(passwordEncoder.encode(dto.getMemberpw()));
+		dto.setMemberpw(passwordEncoder.encode(dto.getMemberpw()));
 		System.out.println("암호화 후 : " + dto.getMemberpw());
 		
 		if(biz.registRes(dto) > 0) {

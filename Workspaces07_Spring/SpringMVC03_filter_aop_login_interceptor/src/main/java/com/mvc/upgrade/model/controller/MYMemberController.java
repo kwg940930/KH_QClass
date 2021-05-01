@@ -63,11 +63,8 @@ public class MYMemberController {
 	
 	@RequestMapping(value="registres.do", method=RequestMethod.POST)
 	public String registRes(MYMemberDto dto) {
-		logger.info("[Controller] registRes.do");
 		
-		System.out.println("test01");
 		if(biz.registRes(dto) > 0) {
-			System.out.println("test02");
 			return "redirect:loginform.do";
 		}
 		return "redirect:registform.do";

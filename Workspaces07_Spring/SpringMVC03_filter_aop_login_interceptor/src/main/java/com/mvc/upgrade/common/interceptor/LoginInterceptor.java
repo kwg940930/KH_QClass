@@ -22,6 +22,12 @@ public class LoginInterceptor implements HandlerInterceptor {
 			return true;
 		} else if(request.getRequestURI().contains("/ajaxlogin.do")) {
 			return true;
+		} else if(request.getRequestURI().contains("/test.do")) {
+			return true;
+		} else if(request.getRequestURI().contains("/registform.do")) {
+			return true;
+		} else if(request.getRequestURI().contains("/registres.do")) {
+			return true;
 		}
 		/*
 		if (request.getRequestURI().contains("/loginform.do") || (request.getRequestURI().contains("/ajaxlogin.do")) {

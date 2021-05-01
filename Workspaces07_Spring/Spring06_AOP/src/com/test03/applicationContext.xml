@@ -12,6 +12,7 @@
 	<aop:config>
 		<aop:aspect ref="myAspect">
 			<!-- 첫번째 *->리턴타입 (..)은 파라미터의 갯수가 몇개여도 상관없다 -->
+			<!-- execution(public * com.test03.Woman.classWork(..)) -->
 			<!-- Woman.classWork가 호출될떄만 before붙여주세요 하는 명령 -->
 			<aop:before method="before" pointcut="execution(public void com.test03.Woman.classWork())" />
 			<aop:after method="after" pointcut="execution(public void com.test03.Woman.classWork())" />

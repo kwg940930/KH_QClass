@@ -7,7 +7,6 @@ public class Woman {
 
 		try {
 			System.out.println("컴퓨터를 켜서 주식본다. ");
-
 		} catch (Exception e) {
 			System.out.println("쉬는날이었다....");
 		} finally {

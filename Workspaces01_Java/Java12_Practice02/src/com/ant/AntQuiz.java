@@ -3,79 +3,48 @@ package com.ant;
 import java.util.Scanner;
 
 /*
- * [00]1
- * [01]1 1
- * [02]1 2
- * [03]1 1 2 1
- * [04]1 2 2 1 1 1
- * [05]1 1 2 2 1 3
- * [06]1 2 2 2 1 1 3 1
- * [07]1 1 2 3 1 2 3 1 1 1
- * [08]1 2 2 1 3 1 1 1 2 1 3 1 1 3
- * [09]1 1 2 2 1 1 3 1 1 3 2 1 1 1 3 1 1 2 3 1
- * [10]1 2 2 2 1 2 3 1 1 2 3 1 2 1 1 3 3 1 1 2 2 1 3 1 1 1
- * ......
- * 
+ * 1
+ * 11
+ * 12
+ * 1121
+ * 122111
+ * 112213
+ * 12221131
+ * 1123123111
+ * 12213111213113
  */
 
-
-
-
-
 public class AntQuiz {
-
-	
-	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("level : ");
-		int n = sc.nextInt();
-		
-		int count;
-		
-		int[][] arr = new int[n][];
-		
-		arr[0] = new int[] {1};
-		for(int i = 1; i < arr.length; i++) {
-			count = 1;
-			arr[i] = new int[i + 1];
+		System.out.println("level :");
+		int level = sc.nextInt();
 
-			
-			for(int j = 0; j < arr[i].length; j++) {
-				if(j==0) {
-					arr[i][j] = 1;
-				}else if( j != 0) {
-					for(int k = 1; k < arr[i].length; k++) {
-				
-						if(arr[i-1][k-1] == arr[i-1][k]) {
-							count++;
-						}
-					}
+		String s = new String();
+
+		for (int i = 0; i < level; i++) {
+			String[] ant = s.split("");
+			String tmp = ant[0];
+
+			int cnt = 0;
+			s = new String();
+
+			for (int j = 0; j < ant.length; j++) {
+				if (tmp.equals(ant[j])) {
+					cnt++;
+				} else {
+					s = s + tmp + cnt;
+					tmp = ant[j];
+					cnt = 1;
 				}
-				arr[i][j] = count;
 			}
-			
-			
-			
+			if (cnt >= 1) {
+				s = s + tmp + cnt;
+				cnt = 0;
+			}
+			System.out.println(s);
+		}
+		sc.close();
 
-		}
-		prn(arr);
-		
-        sc.close();
-        
 	}
-	
-	private static void prn(int[][] arr) {
-		for (int i = 0; i < arr.length; i++) {
-			for(int j = 0; j < arr[i].length; j++) {
-				System.out.printf("%3d", arr[i][j]);
-			}
-			System.out.println();
-		}
-	}
-	
-	
-	
-	
-	
 }

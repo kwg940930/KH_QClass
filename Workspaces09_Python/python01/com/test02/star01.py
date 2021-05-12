@@ -24,8 +24,8 @@ print('-----')
 **
 *
 '''
-for i in range(5, 0, -1):
-    print('*' * (i))
+for i in range(5):
+    print('*' * (5 - i))
 print('-----')
 
 
@@ -38,12 +38,8 @@ print('-----')
  ****
 *****
 '''
-for i in range(5, 0, -1):
-    print()
-    for j in range(i-1):
-        print(' ',end='')
-    print('*'*(6-i),end='')
-print()
+for i in range(5):
+    print(' '*(4-i) + '*' * (1 + i))
 print('-----')
 
 
@@ -55,12 +51,8 @@ print('-----')
    **
     *
 '''
-for i in range(0, 5):
-    print(' '*i,end='')
-    for j in range(5, i, -1):
-        print('*',end='')
-    print()
-print()
+for i in range(5):
+    print(' '*(i) + '*'*(5-i))
 print('-----')
     
     
@@ -72,8 +64,5 @@ print('-----')
  *******
 *********
 '''
-for i in range(5, 0, -1):
-    print()
-    for j in range(i-1):
-        print(' ',end='')
-    print('*'*(((6-i)*2)-1),end='')
+for i in range(5):
+    print(' ' * (4 - i) + '*' * (2 * i + 1))
